@@ -28,7 +28,7 @@ struct ContentView: View {
             Image(systemName: "house.fill")
             }.padding()
             Spacer()
-                .frame(height:105)
+                .frame(height:75)
             
             Text("Create New\nAccount")
                 .font(.largeTitle)
@@ -68,7 +68,15 @@ struct ContentView: View {
                 .background(Color.white.opacity(0.7))
                }.padding(.bottom)
             Spacer()
-                .frame(height:180)
+                .frame(height:150)
+            
+            Text("Next")
+                .font(.headline)
+                .fontWeight(.bold)
+                .padding()
+                .ignoresSafeArea()
+                .frame(width: 150, height: 60, alignment: .center)
+                .background(Color.white.opacity(0.43))
             
 }.foregroundColor(Color.white)
            
