@@ -9,24 +9,68 @@ import SwiftUI
 
 struct ContentView: View {
     @State var username = ""
-        
+    @State var name = ""
+    @State var lastname = ""
     
     var body: some View {
+        ZStack{
+            Image("bg")
+            .resizable()
+                .ignoresSafeArea()
         VStack{
-            Text("Welcome Back \(username)")
+            HStack{
+            Image(systemName: "line.3.horizontal")
+            Spacer()
+            Text("Home Page")
+                .font(.title2)
+                .fontWeight(.medium)
+            Spacer()
+            Image(systemName: "house.fill")
+            }.padding()
+            Spacer()
+                .frame(height:180)
+            
+            Text("Create New\nAccount")
+                .font(.largeTitle)
+                .multilineTextAlignment(.center)
+                .padding(7.0)
+            VStack{
+
+            Text("Welcome \(name) \(lastname)")
                 .font(.title)
                 .fontWeight(.light)
                 .padding()
-
-        TextField("Enter Username", text: $username)
-                .padding()
             
-    }
-    }
+            TextField("Enter First Name", text: $name)
+                .padding()
+                .multilineTextAlignment(.center)
+                .frame(width: 300, height: 45, alignment: .center)
+                .background(Color.white.opacity(0.7))
+            
+            TextField("Enter Last Name", text: $lastname)
+                .padding()
+                .multilineTextAlignment(.center)
+                .frame(width: 300, height: 45, alignment: .center)
+                .background(Color.white.opacity(0.7))
+            
+            TextField("Enter UserName", text: $username)
+                .padding()
+                .multilineTextAlignment(.center)
+                .frame(width: 300, height: 45, alignment: .center)
+                .background(Color.white.opacity(0.7))
+            }.padding(.bottom)
+            Spacer()
+                .frame(height:180)
+            
+}.foregroundColor(Color.white)
+           
+
+}
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .previewDevice("iPhone 13")
     }
+}
 }
