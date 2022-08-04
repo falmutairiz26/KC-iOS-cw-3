@@ -28,18 +28,24 @@ struct ContentView: View {
             Image(systemName: "house.fill")
             }.padding()
             Spacer()
-                .frame(height:180)
+                .frame(height:105)
             
             Text("Create New\nAccount")
                 .font(.largeTitle)
                 .multilineTextAlignment(.center)
-                .padding(7.0)
+                .padding()
             VStack{
 
             Text("Welcome \(name) \(lastname)")
                 .font(.title)
                 .fontWeight(.light)
                 .padding()
+                
+                Text("\(username)")
+                    .font(.title)
+                    .fontWeight(.light)
+                    .padding()
+
             
             TextField("Enter First Name", text: $name)
                 .padding()
@@ -47,18 +53,20 @@ struct ContentView: View {
                 .frame(width: 300, height: 45, alignment: .center)
                 .background(Color.white.opacity(0.7))
             
-            TextField("Enter Last Name", text: $lastname)
+            
+                TextField("Enter Last Name", text: $lastname)
                 .padding()
                 .multilineTextAlignment(.center)
                 .frame(width: 300, height: 45, alignment: .center)
                 .background(Color.white.opacity(0.7))
             
-            TextField("Enter UserName", text: $username)
+            
+                TextField("Enter UserName", text: $username)
                 .padding()
                 .multilineTextAlignment(.center)
                 .frame(width: 300, height: 45, alignment: .center)
                 .background(Color.white.opacity(0.7))
-            }.padding(.bottom)
+               }.padding(.bottom)
             Spacer()
                 .frame(height:180)
             
